@@ -1,0 +1,19 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Sun Jun 28 12:38:40 2020
+
+@author: danie
+"""
+
+cube = lambda x: x ** 3
+
+def fibonacci(n):
+    List = [0, 1]
+    for i in range(2, n):
+        List.append(List[i-1] + List[i-2])
+        
+    return(List[0:n])
+
+if __name__ == '__main__':
+    n = int(input())
+    print(list(map(cube, fibonacci(n))))
